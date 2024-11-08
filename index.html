@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Loading</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Mengatur gambar latar belakang yang menutupi seluruh body */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url('https://i.ibb.co.com/vsGTFyL/Screenshot-20241108-112541-Contacts.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Menambahkan efek loading spinner */
+        .spinner-container {
+            text-align: center;
+            color: white;
+        }
+
+        /* Pesan loading */
+        .loading-text {
+            position: absolute;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            top: 70%;
+            text-align: center;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="spinner-container">
+        <!-- Spinner menggunakan Bootstrap -->
+        <div class="spinner-border text-light" role="status" style="width: 3rem; height: 3rem;">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <!-- Pesan loading -->
+        <div class="loading-text"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Fungsi untuk beralih ke halaman lain setelah loading selesai
+        setTimeout(function() {
+            // Mengarahkan ke halaman lain setelah 3 detik (3000 ms)
+            window.location.href = 'halaman_selanjutnya.html'; // Ganti dengan URL halaman tujuan Anda
+        }, 3000); // 3 detik loading
+    </script>
+</body>
+</html>
